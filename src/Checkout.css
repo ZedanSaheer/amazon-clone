@@ -1,0 +1,42 @@
+.checkout{
+    width: 100%;
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.checkout-container{
+    width: 100%;
+    display: flex;
+}
+
+.checkout_left{
+    flex:1;
+    width: 100%;
+    padding: 10px;
+    overflow:hidden;
+}
+
+.checkout_left-title{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px 0px;
+    border-bottom: 1px solid gray;
+}
+
+.checkout_left-ad{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.checkout-ad{
+    width: 100%;
+}
+
+.checkout_right{
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    overflow:hidden;
+}

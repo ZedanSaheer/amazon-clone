@@ -66,6 +66,17 @@
     .home_row-container{
         margin-top: +150px;
     }
+    
+    .home_row{
+        padding: 0px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:600px) {
     .home_bg-text{
         font-size: 1rem;
         text-transform: lowercase;
@@ -97,12 +108,5 @@
         font-size: 1rem;
         text-transform: uppercase;
         margin: 0px 5px 
-    }
-    .home_row{
-        padding: 0px 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
     }
 }

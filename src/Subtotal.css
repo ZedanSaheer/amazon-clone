@@ -1,0 +1,39 @@
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+}
+.subtotal-button{
+    width: 200px;
+    height: 30px;
+    background: rgb(254,189,105);
+    text-transform: uppercase;
+    padding: 5px;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    margin:10px 0px
+}
+.subtotal-button:hover{
+    background: rgb(252, 143, 0);;
+}
+
+.subtotal-text{
+    display: flex;
+    align-items: center;
+    margin:10px 0px
+}
+.subtotal-text-small{
+    display: flex;
+    align-items: center;
+    margin:10px 0px;
+    text-transform: lowercase;
+    font-size: 12px;
+}
+
+.m-r{
+    margin-right: 5px;
+}
+.m-l{
+    margin-left: 5px;
+}
