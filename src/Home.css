@@ -23,6 +23,7 @@
     color: whitesmoke;
     position: absolute;
     top: 50%;
+    left: 30%;
     padding-left: 20px;
     font-weight: 700;
 }
@@ -33,6 +34,7 @@
     color: whitesmoke;
     position: absolute;
     top: 40%;
+    left: 30%;
     padding-left: 20px;
     font-weight: 700;
 }
@@ -74,10 +76,47 @@
         justify-content: center;
         align-items: center;
     }
+    .home_bg-text{
+        font-size: 2rem;
+        text-transform: lowercase;
+        color: whitesmoke;
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        padding-left: 20px;
+        font-weight: 700;
+    }
+    
+    .home_bg-text-two{
+        font-size: 1rem;
+        text-transform: lowercase;
+        color: whitesmoke;
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        padding-left: 20px;
+        font-weight: 700;
+    }
+    
 }
 
 @media (max-width:600px) {
+    .home_row-container{
+        margin-top: +350px;
+    }
+    
+
     .home_bg-text{
+        font-size: 0.8rem;
+        text-transform: lowercase;
+        color: whitesmoke;
+        position: absolute;
+        top: 30%;
+        padding-left: 20px;
+        font-weight: 700;
+    }
+    
+    .home_bg-text-two{
         font-size: 1rem;
         text-transform: lowercase;
         color: whitesmoke;
@@ -86,26 +125,16 @@
         padding-left: 20px;
         font-weight: 700;
     }
-    
-    .home_bg-text-two{
-        font-size: 0.5rem;
-        text-transform: lowercase;
-        color: whitesmoke;
-        position: absolute;
-        top: 30%;
-        padding-left: 20px;
-        font-weight: 700;
-    }
     .home_bg-text-highlight{
         color: rgb(254,189,105);
-        font-size: 2rem;
+        font-size: 1rem;
         text-transform: uppercase;
         margin: 0px 5px 
     }
     
     .home_bg-text-highlight-two{
         color: rgb(254,189,105);
-        font-size: 1rem;
+        font-size: 2rem;
         text-transform: uppercase;
         margin: 0px 5px 
     }

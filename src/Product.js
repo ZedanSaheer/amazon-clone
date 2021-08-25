@@ -31,7 +31,7 @@ const Product = ({id,title,price,image,rating}) => {
                 <strong>{price}</strong>
             </div>
             <div className="product_rating">
-                {Array(rating).fill().map((_,i)=> (<span className="product_rating-star">⭐</span>))}
+                {Array(rating).fill().map((_,i)=> (<span className="product_rating-star" key={i}>⭐</span>))}
             </div>
             <div className="product_image-container">
                 <img src={image} alt="product" className="product_image"/>
