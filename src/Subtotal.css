@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
-    background: white;
+    background-color: rgb(219, 219, 219);
     padding: 10px 0px;
     margin: 10px 0px;
     width: 400px;
+    height: 400px;
 }
 .subtotal-button{
     width: 200px;

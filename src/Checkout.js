@@ -17,7 +17,10 @@ const Checkout = () => {
                         <img src="https://offerscouponsdeals.in/blog/wp-content/uploads/2018/12/Top_banner_PC_NewGirl.jpg" alt="ad" className="checkout-ad" />
                     </div>
                     <div className="checkout_left-title">your shopping basket :</div>
-                    <div className="checkout_left-products">
+                    <div className="checkout_left-products"> 
+   
+                     {/*    <CheckoutProduct id={Math.random()*100} title="Apple iPhone XR (64GB) - Black" price={49.99} rating={1} image="https://m.media-amazon.com/images/I/519KIlHA2wL._AC_UY327_FMwebp_QL65_.jpg"/> */}
+
                       {basket.map(item=>(  <CheckoutProduct
                       id = {item.id}
                       image = {item.image}
