@@ -27,11 +27,11 @@ const Home = () => {
                     <Product id={Math.random()*100} title="OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage)" price={29.99} rating={5} image="https://m.media-amazon.com/images/I/71KVeQql77S._AC_UL480_FMwebp_QL65_.jpg" />
                 </div>
                 <div className="home_row">
-                    <Product id={Math.random()*100} title="The Psychology of Money" price={400} rating={5} image="https://m.media-amazon.com/images/I/81cpDaCJJCL._AC_UY327_FMwebp_QL65_.jpg" />
-                    <Product id={Math.random()*100} title="World’s Most Popular Books to Achieve Success and Build a Fortune (Set of 4 Books)" price={500} rating={4} image="https://m.media-amazon.com/images/I/71Xkv-KOK6L._AC_UY327_FMwebp_QL65_.jpg" />
+                    <Product id={Math.random()*100} title="The Psychology of Money" price={499.99} rating={5} image="https://m.media-amazon.com/images/I/81cpDaCJJCL._AC_UY327_FMwebp_QL65_.jpg" />
+                    <Product id={Math.random()*100} title="World’s Most Popular Books to Achieve Success and Build a Fortune (Set of 4 Books)" price={599.99} rating={4} image="https://m.media-amazon.com/images/I/71Xkv-KOK6L._AC_UY327_FMwebp_QL65_.jpg" />
                 </div>
                 <div className="home_row">
-                    <Product id={Math.random()*100} title="Samsung 34-inch (86.40cm) Curved Monitor- 21:9 Ultrawide QLED, Thunderbolt 3 Port- LC34J791WTWXXL" price={1000} rating={5} image="https://m.media-amazon.com/images/I/91pi34PiUPL._AC_UY327_FMwebp_QL65_.jpg" />
+                    <Product id={Math.random()*100} title="Samsung 34-inch (86.40cm) Curved Monitor- 21:9 Ultrawide QLED, Thunderbolt 3 Port- LC34J791WTWXXL" price={999.99} rating={5} image="https://m.media-amazon.com/images/I/91pi34PiUPL._AC_UY327_FMwebp_QL65_.jpg" />
                 </div>
             </div>
         </div>

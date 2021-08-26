@@ -1,0 +1,83 @@
+.login_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+}
+
+h1{
+    margin: 10px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px ;
+    background: whitesmoke;
+    width: 400px;
+    padding: 20px;
+}
+.login_form{
+    display: flex;
+    flex-direction: column;
+}
+.login_form label{
+    margin: 10px 0px;
+}
+
+.login_form input{
+    padding: 10px;
+    border: none;
+}
+
+.login_form input:focus{
+    outline:1px solid rgb(254,189,105);
+}
+
+.login_form-button{
+    margin: 20px 0px;
+    padding: 10px 5px;
+   background: rgb(254,189,105);
+   outline: none;
+   border: none;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: white;
+}
+
+.login_form-button:hover{
+    background: rgb(255, 145, 0); ;
+}
+.login_form-button-two{
+    margin: 20px 0px;
+    padding: 10px 5px;
+   background: rgb(151, 151, 151);
+   outline: none;
+   border: none;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: white;
+}
+
+.login_form-button-two:hover{
+    background: rgb(77, 77, 77); 
+    color: white;
+}
+
+small{
+    text-transform: capitalize;
+    color: gray;
+    padding: 0px 10px;
+    margin: 10px;
+}
+
+@media (max-width:500px) {
+    .login{
+        width: 100%;
+    }
+}
