@@ -1,14 +1,19 @@
 import React,{useState} from 'react'
 import './Login.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import { auth } from './firebase'
 
 const Login = () => {
+    
+    const history = useHistory();
 
     const signIn = e =>{
             e.preventDefault();
     }
     const register = e =>{
             e.preventDefault();
+            auth.createUserWithEmailAndPassword(email,password)
+            .the
     }
 
     const [email,setEmail]=useState('');
