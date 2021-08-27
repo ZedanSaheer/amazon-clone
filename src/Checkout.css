@@ -5,6 +5,10 @@
     margin-top: 70px;
 }
 
+.checkout h3{
+    margin: 10px 0px;
+}
+
 .checkout-container{
     width: 100%;
     display: flex;

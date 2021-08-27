@@ -7,7 +7,7 @@ import { useStateValue } from './StateProvider'
 
 const Checkout = () => {
 
-    const [{basket},dispatch]=useStateValue();
+    const [{basket, user },dispatch]=useStateValue();
 
     return (
         <div className="checkout">
@@ -16,6 +16,7 @@ const Checkout = () => {
                     <div className="checkout_left-ad">
                         <img src="https://offerscouponsdeals.in/blog/wp-content/uploads/2018/12/Top_banner_PC_NewGirl.jpg" alt="ad" className="checkout-ad" />
                     </div>
+                    <h3>Hello {user?user.email : "Guest!"}</h3>
                     <div className="checkout_left-title">your shopping basket :</div>
                     <div className="checkout_left-products"> 
    

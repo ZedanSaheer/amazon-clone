@@ -31,8 +31,6 @@ const Login = () => {
 
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
-    const [errorEmail , setEmailError] = useState('');
-    const [errorPass , setPassError] = useState('');
 
     return (
         <div className="login_container">

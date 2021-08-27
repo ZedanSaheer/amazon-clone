@@ -4,10 +4,18 @@ import { AiOutlineSearch } from "react-icons/ai"
 import { FaCartArrowDown } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 import { useStateValue } from './StateProvider'
+import { auth } from './firebase'
 
 const Header = () => {
 
-    const [{basket}, dispatch] = useStateValue();
+    const [{basket, user}, dispatch] = useStateValue();
+
+    const handleAuth = () => {
+        if(user){
+            auth.signOut();
+        }
+    }
+
     return (
         <div className="header">
             <Link to="/">
@@ -22,10 +30,10 @@ const Header = () => {
                 </div>
             </div>
             <div className="header_nav">
-              <Link to='/login'>
+              <Link to={!user && '/login'}>
               <div className="header_nav-option">
-                    <span className="header_nav-option-one">hello guest!</span>
-                    <span className="header_nav-option-two">sign in</span>
+                    <span className="header_nav-option-one">hello {user?.email}!</span>
+                    <span className="header_nav-option-two" onClick={handleAuth}>{user? 'Sign out' : 'sign in'}</span>
                 </div>
               </Link>
                 <div className="header_nav-option">
