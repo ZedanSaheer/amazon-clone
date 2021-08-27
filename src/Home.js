@@ -34,6 +34,9 @@ const Home = () => {
                     <Product id={Math.random()*100} title="Samsung 34-inch (86.40cm) Curved Monitor- 21:9 Ultrawide QLED, Thunderbolt 3 Port- LC34J791WTWXXL" price={999.99} rating={5} image="https://m.media-amazon.com/images/I/91pi34PiUPL._AC_UY327_FMwebp_QL65_.jpg" />
                 </div>
             </div>
+            <div className="footer">
+                <p>All Copyrights Reserved 	&copy; Zedan Saheer</p>
+            </div>
         </div>
     )
 }
