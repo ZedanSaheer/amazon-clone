@@ -69,7 +69,7 @@ h1{
     color: white;
 }
 
-small{
+.login small{
     text-transform: capitalize;
     color: gray;
     padding: 0px 10px;
