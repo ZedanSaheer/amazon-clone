@@ -7,7 +7,7 @@ import { useStateValue } from './StateProvider'
 
 const Checkout = () => {
 
-    const [{basket, user },dispatch]=useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     return (
         <div className="checkout">
@@ -16,18 +16,15 @@ const Checkout = () => {
                     <div className="checkout_left-ad">
                         <img src="https://offerscouponsdeals.in/blog/wp-content/uploads/2018/12/Top_banner_PC_NewGirl.jpg" alt="ad" className="checkout-ad" />
                     </div>
-                    <h3>Hello {user?user.email : "Guest!"}</h3>
-                    <div className="checkout_left-title">your shopping basket :</div>
+                    <h3>Hello {user ? user.email : "Guest!"}</h3>
+                    <div className="checkout_left-title">{basket.length === 0 ? "your shopping basket is empty" : "your shopping basket"}</div>
                     <div className="checkout_left-products"> 
-   
-                     {/*    <CheckoutProduct id={Math.random()*100} title="Apple iPhone XR (64GB) - Black" price={49.99} rating={1} image="https://m.media-amazon.com/images/I/519KIlHA2wL._AC_UY327_FMwebp_QL65_.jpg"/> */}
-
-                      {basket.map(item=>(  <CheckoutProduct
-                      id = {item.id}
-                      image = {item.image}
-                      price = {item.price}
-                      title = {item.title}
-                      rating = {item.rating} />))}
+                        {basket.map(item => (<CheckoutProduct
+                            id={item.id}
+                            image={item.image}
+                            price={item.price}
+                            title={item.title}
+                            rating={item.rating} />))}
                     </div>
                 </div>
                 <div className="checkout_right"><Subtotal /></div>
