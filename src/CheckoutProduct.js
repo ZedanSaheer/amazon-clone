@@ -14,7 +14,7 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
     }
 
     return (
-        <div className="checkoutProduct">
+        <div className="checkoutProduct" key={id}>
             <div className="checkoutProduct_logo">
                 <img src={image} alt="logo" className="checkoutProduct_logo-img" />
             </div>
