@@ -27,7 +27,9 @@ h2{
     text-transform: capitalize;
     flex: 0.7;
 }
-
+.payment_section-content-address-text-email{
+    margin: 10px 0px ;
+}
 .padding{
     padding: 10px;
 }
@@ -40,4 +42,19 @@ h2{
 .payment_section-content-address-text{
     font-style: italic;
     font-size: 12px;
+}
+.payment_section-content form{
+    width: 100%;
+}
+
+.payment_section-content-price-container{
+    margin: 10px 0px;
+}
+.price-container-button{
+    background: rgb(254,189,105);
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 5px;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
 }

@@ -8,7 +8,8 @@ import Payment from './Payment'
 import Login from './Login'
 import { auth } from './firebase'
 import { useStateValue } from './StateProvider'
-import {Elements, loadStripe} from '@stripe/stripe-js'
+import { loadStripe} from '@stripe/stripe-js'
+import { Elements } from '@stripe/react-stripe-js'
 
 const App = () => {
 
