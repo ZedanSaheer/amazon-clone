@@ -8,40 +8,46 @@ import Payment from './Payment'
 import Login from './Login'
 import { auth } from './firebase'
 import { useStateValue } from './StateProvider'
-import { loadStripe} from '@stripe/stripe-js'
+import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import Orders from './Orders'
+
+
 
 const App = () => {
 
   const promise = loadStripe('pk_test_51JTO0ZSJ3rx5NQLiKEyUknCFAov5qHr2XT7UcJvYHm0EfELMWs1jXSsXhSg8vtQwRYYE8rnYSqwILgz2wPdiQkim00U7ze6gFo')
 
-  const [{basket},dispatch]=useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
-  useEffect(() => { 
-    auth.onAuthStateChanged(authUser =>{
-      if(authUser){
-          dispatch({
-            type : 'SET_USER',
-            user : authUser
-          })
-      }else{
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+      if (authUser) {
         dispatch({
-          type : 'SET_USER',
-          user : null
+          type: 'SET_USER',
+          user: authUser
+        })
+      } else {
+        dispatch({
+          type: 'SET_USER',
+          user: null
         })
       }
     })
   }, [dispatch])
 
+  useEffect(() => {
+    localStorage.setItem("basket", JSON.stringify(basket));
+  }, [basket])
+
   return (
     <Router>
       <div className="app">
         <Switch>
-        <Route path='/orders'>
-          <Header />
-          <Orders />
-        </Route>
+          <Route path='/orders'>
+            <Header />
+            <Orders />
+          </Route>
           <Route path='/login'>
             <Login />
           </Route>
@@ -52,8 +58,8 @@ const App = () => {
           <Route path='/payment'>
             <Header />
             <Elements stripe={promise}>
-           <Payment />
-           </Elements>
+              <Payment />
+            </Elements>
           </Route>
           <Route path="/">
             <Header />

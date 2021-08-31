@@ -1,5 +1,8 @@
+const loadData = localStorage.getItem("basket");
+const addData = loadData? JSON.parse(loadData) : [];
+
 export const initialState = {
-    basket: [],
+    basket: addData,
     user: null,
 };
 

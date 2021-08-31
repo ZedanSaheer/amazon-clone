@@ -14,6 +14,12 @@ const Header = () => {
     const handleAuth = () => {
         if (user) {
             auth.signOut();
+            localStorage.clear();
+
+            dispatch({
+                type: 'EMPTY_BASKET',
+            })
+
         }
     }
     const handleMenu = () => {
