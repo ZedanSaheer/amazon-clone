@@ -36,10 +36,12 @@ const Header = () => {
                     <span className="header_nav-option-two" onClick={handleAuth}>{user? 'Sign out' : 'sign in'}</span>
                 </div>
               </Link>
-                <div className="header_nav-option">
+               <Link to='/orders'>
+               <div className="header_nav-option">
                     <span className="header_nav-option-one">returns</span>
                     <span className="header_nav-option-two">& orders</span>
                 </div>
+               </Link>
                 <div className="header_nav-option">
                     <span className="header_nav-option-one">your</span>
                     <span className="header_nav-option-two">prime</span>

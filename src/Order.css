@@ -1,3 +1,20 @@
-.orders-container{
-    margin-top: 70px;
+.order-container{
+    background: white;
+    margin: 40px;
+    padding: 40px;
+    position: relative;
+}
+
+.order-id{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+.order-date{
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+.order-checkout{
+    margin: 20px 0px;
 }

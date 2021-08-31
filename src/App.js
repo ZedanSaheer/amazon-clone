@@ -10,7 +10,7 @@ import { auth } from './firebase'
 import { useStateValue } from './StateProvider'
 import { loadStripe} from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
-import Order from './Order'
+import Orders from './Orders'
 
 const App = () => {
 
@@ -40,7 +40,7 @@ const App = () => {
         <Switch>
         <Route path='/orders'>
           <Header />
-          <Order />
+          <Orders />
         </Route>
           <Route path='/login'>
             <Login />
