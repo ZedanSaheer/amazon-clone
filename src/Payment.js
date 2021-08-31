@@ -34,8 +34,6 @@ const Payment = () => {
       getClientSecret();
     }, [basket])
 
-    console.log(clientSecret ,getBasketTotal(basket)*100);
-
     const handleSubmit = async (event)=>{
         event.preventDefault();
         setProcessing(true);
@@ -75,7 +73,7 @@ const Payment = () => {
 
     return (
         <div className="payment_container">
-        <h2> Checkout <Link to="/checkout">(Items : {basket?.length})</Link></h2>
+        <h2> Checkout <Link to="/checkout" className="payment-link">(Items : {basket?.length})</Link></h2>
             <div className="payment_section">
                 <div className="payment_section-title"><h3>Delivery Address</h3></div>
                 <div className="payment_section-content">

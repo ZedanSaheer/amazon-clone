@@ -24,7 +24,9 @@ const Checkout = () => {
                             image={item.image}
                             price={item.price}
                             title={item.title}
-                            rating={item.rating} />))}
+                            rating={item.rating} 
+                            hideButton={true}
+                            />))}
                     </div>
                 </div>
                 <div className="checkout_right"><Subtotal /></div>

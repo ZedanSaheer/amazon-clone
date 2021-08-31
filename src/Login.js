@@ -19,13 +19,13 @@ const Login = () => {
             e.preventDefault();
             auth.createUserWithEmailAndPassword(email,password)
             .then((auth)=>{
-                console.log(auth);
-            })
-            .catch((error)=>{
-                alert(error.message)
                 if(auth){
                     history.push('/')
                 }
+            })
+            .catch((error)=>{
+                alert(error.message)
+                
             })
     }
 

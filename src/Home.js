@@ -7,9 +7,9 @@ const Home = () => {
         <div className="home">
             <div className="home_container">
                 <div className="home_bg">
-                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=771&q=80" alt="banner" className="home_bg-banner" />
+                    <img src="https://images.unsplash.com/photo-1592503254549-d83d24a4dfab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80" alt="banner" className="home_bg-banner" />
                 </div>
-                <div className="home_bg-text">
+           {/*      <div className="home_bg-text">
                     to the future of <span className="home_bg-text-highlight">
                         E-commerce.
                     </span>
@@ -18,7 +18,7 @@ const Home = () => {
                     <span className="home_bg-text-highlight-two">
                         zedan saheer
                     </span> and his lucid dream brings you
-                </div>
+                </div> */}
             </div>
             <div className="home_row-container">
                 <div className="home_row">

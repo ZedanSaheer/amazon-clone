@@ -16,7 +16,7 @@ const App = () => {
 
   const promise = loadStripe('pk_test_51JTO0ZSJ3rx5NQLiKEyUknCFAov5qHr2XT7UcJvYHm0EfELMWs1jXSsXhSg8vtQwRYYE8rnYSqwILgz2wPdiQkim00U7ze6gFo')
 
-  const [{},dispatch]=useStateValue();
+  const [{basket},dispatch]=useStateValue();
 
   useEffect(() => { 
     auth.onAuthStateChanged(authUser =>{

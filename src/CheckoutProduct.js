@@ -28,7 +28,7 @@ const CheckoutProduct = ({ id, image, title, price, rating , hideButton}) => {
                     <strong>{price}</strong>
                 </div>
                 <div className="checkoutProduct_content-button">
-                   {hideButton && (<button className="checkoutProduct_button" onClick={removeFromBasket}>Remove from basket</button>)}
+                   {hideButton && <button className="checkoutProduct_button" onClick={removeFromBasket}>Remove from basket</button>}
                 </div>
             </div>
         </div>
