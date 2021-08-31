@@ -19,7 +19,7 @@ const Checkout = () => {
                     <h3>Hello {user ? user.email : "Guest!"}</h3>
                     <div className="checkout_left-title">{basket.length === 0 ? "your shopping basket is empty" : "your shopping basket"}</div>
                     <div className="checkout_left-products"> 
-                        {basket.map(item => (<CheckoutProduct
+                        {basket.map(item => (<CheckoutProduct key={item.id}
                             id={item.id}
                             image={item.image}
                             price={item.price}
