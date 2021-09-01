@@ -13,7 +13,7 @@ const Home = ({popUp}) => {
             </div>
             <div className="home_row-container">
                 <div className="home_row">
-                    <Product id={Math.random() * 100} title="Apple iPhone XR (64GB) - Black" price={49.99} rating={1} image="https://m.media-amazon.com/images/I/519KIlHA2wL._AC_UY327_FMwebp_QL65_.jpg" popUp={popUp} />
+                    <Product id={Math.random() * 100} title="Apple iPhone XR (64GB) - Black" price={49.99} rating={1} image="https://m.media-amazon.com/images/I/519KIlHA2wL._AC_UY327_FMwebp_QL65_.jpg" popUp={popUp}/>
                     <Product id={Math.random() * 100} title="Apple iPhone 12 Pro Max (256GB) - Pacific Blue" price={129.99} rating={4} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn6kWobLxR89FjWVd86Xsf8k379Y5284lHTntu3lK52AlW6Vkl69JgcXPRetTYPY1Pge4&usqp=CAU" popUp={popUp}/>
                     <Product id={Math.random() * 100} title="OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage)" price={29.99} rating={5} image="https://m.media-amazon.com/images/I/71KVeQql77S._AC_UL480_FMwebp_QL65_.jpg" popUp={popUp}/>
                 </div>

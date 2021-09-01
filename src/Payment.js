@@ -67,6 +67,8 @@ const Payment = ({popUp , popUpWarn}) => {
             })
 
             history.replace('/orders')
+        }).then(({ error })=>{
+            console.log(error);
         })
     }
 

@@ -32,7 +32,7 @@ const App = () => {
 
   const popUpWarn=(text ,e)=> toast.warn(text + ' '+ e, {
     position: "top-center",
-    autoClose: 5000,
+    autoClose: 3000,
     hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
@@ -42,8 +42,8 @@ const App = () => {
 
     const popUpError = (text , e) => toast.error(text + ' ' + e, {
       position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: true,
+      autoClose: 2000,
+      hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
@@ -96,7 +96,7 @@ const App = () => {
           </Route>
           <Route path="/checkout">
             <Header />
-            <Checkout popUp={popUp}/>
+            <Checkout popUpError={popUpError}/>
           </Route>
           <Route path='/payment'>
             <Header />

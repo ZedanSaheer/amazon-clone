@@ -2,12 +2,12 @@ import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
 
-const CheckoutProduct = ({ id, image, title, price, rating , hideButton , popUp}) => {
+const CheckoutProduct = ({ id, image, title, price, rating , hideButton , popUpError}) => {
 
     const [{basket} , dispatch] = useStateValue();
 
     const removeFromBasket = () =>{
-        popUp("Removed :",title)
+        popUpError("Removed :",title)
         dispatch({
             type : 'REMOVE_FROM_BASKET',
             id : id,
