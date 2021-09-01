@@ -7,6 +7,7 @@ import CurrencyFormat from 'react-currency-format'
 const Order = ({ order }) => {
     return (
         <div className="order-container">
+             <h2>Order</h2>
             <p className="order-date">{moment.unix(order.data.created).format('MMMM Do YYYY , h:mma')}</p>
             <p className="order-id"><small>{order.id}</small></p>
             <div className="order-checkout">

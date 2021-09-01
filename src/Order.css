@@ -18,3 +18,22 @@
 .order-checkout{
     margin: 20px 0px;
 }
+.order-container h2{
+    margin: 20px 0px;
+}
+
+@media (max-width:600px) {
+    .order-id{
+        position: absolute;
+        left: 40px;
+        top: -10px;
+    }
+    .order-date{
+        position: absolute;
+        left: 40px;
+        top: 20px;
+    }
+    .order-container h2{
+        margin: 20px 0px;
+    }
+}
