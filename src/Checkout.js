@@ -5,7 +5,7 @@ import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider'
 
 
-const Checkout = () => {
+const Checkout = ({popUp}) => {
 
     const [{ basket, user }, dispatch] = useStateValue();
 
@@ -26,6 +26,7 @@ const Checkout = () => {
                             title={item.title}
                             rating={item.rating} 
                             hideButton={true}
+                            popUp ={popUp}
                             />))}
                     </div>
                 </div>

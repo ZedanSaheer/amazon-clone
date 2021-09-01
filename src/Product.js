@@ -2,13 +2,12 @@ import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
 
-const Product = ({id,title,price,image,rating}) => {
+const Product = ({id,title,price,image,rating,popUp}) => {
 
     const [{basket},dispatch] = useStateValue();
 
-
-
     const addToBasket = () =>{
+        popUp("Added :" , title);
         dispatch({
             type : 'ADD_TO_BASKET',
             item: {

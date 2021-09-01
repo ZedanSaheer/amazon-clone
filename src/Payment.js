@@ -9,7 +9,7 @@ import { getBasketTotal } from './reducer';
 import axios from './axios';
 import db from './firebase';
 
-const Payment = () => {
+const Payment = ({popUp , popUpWarn}) => {
 
     const [{basket , user} , dispatch] = useStateValue();
 
@@ -37,6 +37,7 @@ const Payment = () => {
     const handleSubmit = async (event)=>{
         event.preventDefault();
         setProcessing(true);
+        popUpWarn("Processing Payment" , "")
         
         const payload = await stripe.confirmCardPayment(clientSecret ,{
             payment_method:{
@@ -57,6 +58,8 @@ const Payment = () => {
                 amount : paymentIntent.amount,
                 created : paymentIntent.created
             })
+
+            popUp("Payment Successful!","")
             
 
             dispatch({
@@ -66,6 +69,7 @@ const Payment = () => {
             history.replace('/orders')
         })
     }
+
     const handleChange = (event)=>{
         setDisabled(event.empty);
         setError(event.error? event.error.message : "")

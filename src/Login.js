@@ -3,34 +3,36 @@ import './Login.css'
 import { Link, useHistory } from 'react-router-dom'
 import {auth} from './firebase'
 
-const Login = () => {
+const Login = ({popUp,popUpError}) => {
     
     const history = useHistory();
 
     const signIn = e =>{
             e.preventDefault();
             auth.signInWithEmailAndPassword(email,password)
-            .then(auth=>{
+            .then((auth)=>{
+                popUp("Welcome", auth.user.email)
                 history.push('/');
             })
-            .catch(error=>alert(error.message))
+            .catch((error)=>popUpError(error.message,""))
     }
     const register = e =>{
             e.preventDefault();
             auth.createUserWithEmailAndPassword(email,password)
             .then((auth)=>{
                 if(auth){
+                    popUp("Welcome", auth.user.email)
                     history.push('/')
                 }
             })
             .catch((error)=>{
-                alert(error.message)
-                
+                popUpError(error.message,"")
             })
     }
 
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+    const [signUp ,setSignUp] = useState(true)
 
     return (
         <div className="login_container">
@@ -40,18 +42,21 @@ const Login = () => {
                 </div>
             </Link>
             <div className="login">
-                <h1>Sign in</h1>
+                {signUp? <h1>Sign up</h1>:<h1>Sign in</h1>}
                 <form className="login_form">
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" className="login_form-email" autoComplete="off" value={email} onChange={e=> setEmail(e.target.value)}  placeholder="Email Address" />
                     <label htmlFor="password">Password</label>
                     <input type="password" name="password" value={password} onChange={e=> setPassword(e.target.value)} className="login_form-email" autoComplete="off" placeholder="Password" />
-                    <button onClick={signIn} className="login_form-button">Sign in</button>
+                  {signUp ? <button onClick={register} className="login_form-button">Sign Up</button> :
+                    <button onClick={signIn} className="login_form-button">Sign in</button>}
                 </form>
                 <small>
                     by signing in you agree to the privacy terms of zedan's unreal dream , we are here to take you a step close to the a future of oblivion!
                 </small>
-                <button onClick={register} className="login_form-button-two">Create An account</button>
+                <button onClick={(e)=>{if(signUp===true){setSignUp(false)}else{
+                    setSignUp(true)
+                }}} className="login_form-button-two">{!signUp ? "Create An account" : "Login Into Existing Account"}</button>
             </div>
         </div>
     )

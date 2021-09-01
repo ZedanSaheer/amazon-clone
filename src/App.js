@@ -11,14 +11,44 @@ import { useStateValue } from './StateProvider'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements } from '@stripe/react-stripe-js'
 import Orders from './Orders'
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
   const promise = loadStripe('pk_test_51JTO0ZSJ3rx5NQLiKEyUknCFAov5qHr2XT7UcJvYHm0EfELMWs1jXSsXhSg8vtQwRYYE8rnYSqwILgz2wPdiQkim00U7ze6gFo')
 
   const [{ basket }, dispatch] = useStateValue();
+
+  const popUp = (text , e) => toast.success( text + " " + e, {
+    position: "top-center",
+    autoClose: 1500,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });;
+
+  const popUpWarn=(text ,e)=> toast.warn(text + ' '+ e, {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+
+    const popUpError = (text , e) => toast.error(text + ' ' + e, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
@@ -43,27 +73,40 @@ const App = () => {
   return (
     <Router>
       <div className="app">
+        <ToastContainer
+          position="top-center"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          style={{zIndex:"999" , padding:"30px"}}
+          enableMultiContainer={true}
+        />
         <Switch>
           <Route path='/orders'>
             <Header />
             <Orders />
           </Route>
           <Route path='/login'>
-            <Login />
+            <Login popUp={popUp} popUpError={popUpError}/>
           </Route>
           <Route path="/checkout">
             <Header />
-            <Checkout />
+            <Checkout popUp={popUp}/>
           </Route>
           <Route path='/payment'>
             <Header />
             <Elements stripe={promise}>
-              <Payment />
+              <Payment popUp={popUp} popUpWarn={popUpWarn}/>
             </Elements>
           </Route>
           <Route path="/">
             <Header />
-            <Home />
+            <Home popUp={popUp} />
           </Route>
         </Switch>
       </div>

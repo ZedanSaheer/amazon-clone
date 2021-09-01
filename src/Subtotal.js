@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState , useEffect } from 'react';
 import CurrencyFormat from 'react-currency-format'
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
@@ -26,7 +26,7 @@ const Subtotal = () => {
                 prefix={"$"}
             />
 
-            <button className="subtotal-button" onClick={(e)=>{user?history.push('/payment') :history.push('/login')}}>Proceed to checkout</button>
+           {basket.length!==0 ?(<button className="subtotal-button" onClick={(e)=>{user?history.push('/payment') :history.push('/login')}}>Proceed to checkout</button>) : <p className="subtotal-button-alt">your basket is empty , please add items to proceed to checkout!</p>}
         </div>
     )
 }
