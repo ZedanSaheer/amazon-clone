@@ -22,7 +22,7 @@ const App = () => {
 
   const popUp = (text , e) => toast.success( text + " " + e, {
     position: "top-center",
-    autoClose: 1500,
+    autoClose: 2000,
     hideProgressBar: false,
     closeOnClick: true,
     pauseOnHover: true,
@@ -32,7 +32,7 @@ const App = () => {
 
   const popUpWarn=(text ,e)=> toast.warn(text + ' '+ e, {
     position: "top-center",
-    autoClose: 3000,
+    autoClose: 2000,
     hideProgressBar: true,
     closeOnClick: true,
     pauseOnHover: true,
