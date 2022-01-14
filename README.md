@@ -1,5 +1,5 @@
 # Amazon Clone
 
-this is a e-commerce project using react, firebase and stripe.
+this is an e-commerce project using react, firebase and stripe.
 
 ![screenshot](amazon.png)
